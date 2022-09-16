@@ -1,0 +1,27 @@
+{
+  "module_content": [
+
+    {
+      "ref": "ExampComp",
+      "options": {
+        "header": "Example Component",
+        "subheader": "Looks like the page you were looking for no longer exists"
+      },
+      "children": [],
+      "marginAttrs": "mt--0 mb--0",
+      "paddingAttrs": "pt--0 pb--0"
+    },
+
+    {
+      "ref": "ExampComp",
+      "options": {
+        "header": "Example Component The Second",
+        "subheader": "Looks like the page you were looking for no longer exists"
+      },
+      "children": [],
+      "marginAttrs": "mt--0 mb--0",
+      "paddingAttrs": "pt--0 pb--0"
+    }
+
+  ]
+}

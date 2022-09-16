@@ -1,0 +1,156 @@
+// fixed values
+$bg: #ececf0;
+$black: #131319;
+$white: #fff;
+
+$greyDarker: #1c1c22;
+$greyDark: #424247;
+$grey: #424247;
+$greyLight: #8e8e91;
+$greyLighter: #d4d4d8;
+$greyLightest: #e2e2e6;
+
+$orange: #ffa700;
+$orangeDark: #d88e01;
+$blue: #0062ff;
+$blueDark: #004bc4;
+$purple: #c152fc;
+$purpleDark: #9b46c9;
+$green: #1cce90;
+$greenDark: #18ac78;
+$red: #ff3030;
+$redDark: #d62828;
+
+$error: $red;
+$warning: $orange;
+$success: $green;
+
+// changable values
+// if you ever need to use var(--) inside rgba, then you will need to use
+// the hexToRGB() function and create a new varibale
+:root {
+  --bg: #{$bg};
+  --black: #{$black};
+  --white: #{$white};
+  --rgb-bg: #{hexToRGB($bg)};
+  --rgb-black: #{hexToRGB($black)};
+  --rgb-white: #{hexToRGB($white)};
+  //
+  --greyDarker: #{$greyDarker};
+  --greyDark: #{$greyDark};
+  --grey: #{$grey};
+  --greyLight: #{$greyLight};
+  --greyLighter: #{$greyLighter};
+  --greyLightest: #{$greyLightest};
+  //
+  --orange: #{$orange};
+  --orangeDark: #{$orangeDark};
+  --blue: #{$blue};
+  --blueDark: #{$blueDark};
+  --purple: #{$purple};
+  --purpleDark: #{$purpleDark};
+  --green: #{$green};
+  --greenDark: #{$greenDark};
+  --red: #{$red};
+  --redDark: #{$redDark};
+}
+
+.invert {
+  --bg: #{$black};
+  --black: #{$white};
+  --white: #{$black};
+  --rgb-bg: #{hexToRGB($black)};
+  --rgb-black: #{hexToRGB($white)};
+  --rgb-white: #{hexToRGB($black)};
+}
+
+$fontcolors: (
+  'black': var(--black),
+  'white': $white
+);
+
+$bgcolors: (
+  'black': var(--black),
+  'white': $white
+);
+
+$fillcolors: (
+  'black': var(--black),
+  'white': $white
+);
+/* ---------------------------------------- */
+
+// containers
+$containers: (
+  'large': 1600,
+  'medium': 1400
+);
+$containerPadding: (
+  'sssl': 88,
+  'xxxl': 40,
+  'l': 32,
+  'xs': 24
+);
+/* ---------------------------------------- */
+
+// fonts
+$sans: 'Arial', sans-serif;
+$serif: 'Times New Roman', serif;
+
+$fontFamilies: (
+  'sans': $sans,
+  'serif': $serif
+);
+
+$fontSizes: (12, 14, 16, 18, 20);
+$fontWeights: (300, 600, 700);
+$lineHeights: (120, 140, 160, 180);
+$letterSpacing: (
+  't20': -0.02,
+  't10': -0.01,
+  'l00': 0,
+  'l10': 0.01,
+  'l20': 0.02
+);
+/* ---------------------------------------- */
+
+// grid
+$gapSizes: (16, 24, 32, 40);
+/* ---------------------------------------- */
+
+// spacing
+$spaceAddPaddings: false;
+$spaceAmounts: (40, 80);
+$spaceSides: ('top', 'bottom');
+/* ---------------------------------------- */
+
+// svgs
+$svgs: (
+  'discord' 24 24,
+  'email' 24 24,
+  'facebook' 24 24,
+  'github' 24 24,
+  'instagram' 24 24,
+  'linkedin' 24 24,
+  'medium' 24 24,
+  'phone' 24 24,
+  'pinterest' 24 24,
+  'reddit' 24 24,
+  'telegram' 24 24,
+  'twitch' 24 24,
+  'twitter' 24 24,
+  'vimeo' 24 24,
+  'whatsapp' 24 24,
+  'youtube' 24 24,
+  'cross' 12 12
+);
+/* ---------------------------------------- */
+
+// body default styles
+$bodyFont: $sans;
+$bodyFontSize: 16;
+$bodyColor: var(--black);
+$bodyBackground: var(--bg);
+$bodyLetterSpace: -0.01;
+$bodyWeight: 400;
+$breakpointMode: 'max';
