@@ -238,8 +238,8 @@ export default {
       }
     },
     handleClick() {
-      // Nothing's selected, fuck off
-      if (!this.selectedMesh) {
+      // Nothing's selected or we're already animating
+      if (!this.selectedMesh || this.isAnimating) {
         return
       }
 
@@ -266,7 +266,13 @@ export default {
                     Math.atan2(points.two.y - points.one.y, points.two.x - points.one.x)
 
       // Create a timeline to animate on to
-      const timeline = gsap.timeline()
+      const timeline = gsap.timeline({
+        onComplete: () => {
+          this.isAnimating = false
+        }
+      })
+
+      this.isAnimating = true
 
       // Now we can rotate the piece to face the direction that it'll be moving
       // For whatever reason the angle we calculate is both facing the wrong way _and_ off by 90 degrees
